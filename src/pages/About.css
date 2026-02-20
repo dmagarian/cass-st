@@ -1,0 +1,91 @@
+.about-page {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-text {
+    padding: 40px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.about-image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.image-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.glow-box-cyan {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    border: 2px solid var(--neon-cyan);
+}
+
+.glow-box-pink {
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+    border: 2px solid var(--neon-pink);
+}
+
+.about-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    filter: contrast(1.1) saturate(1.2);
+}
+
+/* Add a slight purple tint over images to match vibe */
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(181, 55, 242, 0.15);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}

@@ -39,10 +39,17 @@
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
 }
 
 /* Typography styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 400;
   text-transform: uppercase;
@@ -65,10 +72,11 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  /* Prevent horizontal scroll vs 100vw */
   height: 100vh;
   z-index: -1;
-  background-image: 
+  background-image:
     linear-gradient(transparent 95%, rgba(181, 55, 242, 0.5) 100%),
     linear-gradient(90deg, transparent 95%, rgba(181, 55, 242, 0.5) 100%);
   background-size: 50px 50px;
@@ -82,6 +90,7 @@ a:hover {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 0 500px;
   }
@@ -94,28 +103,48 @@ a:hover {
   padding: 0 20px;
 }
 
-.text-pink { color: var(--neon-pink); }
-.text-cyan { color: var(--neon-cyan); }
-.text-sunset { color: var(--sunset-orange); }
+.text-pink {
+  color: var(--neon-pink);
+}
+
+.text-cyan {
+  color: var(--neon-cyan);
+}
+
+.text-sunset {
+  color: var(--sunset-orange);
+}
 
 .glow-pink {
   text-shadow: 0 0 5px var(--neon-pink), 0 0 20px var(--neon-pink);
 }
+
 .glow-cyan {
   text-shadow: 0 0 5px var(--neon-cyan), 0 0 20px var(--neon-cyan);
 }
 
 /* Animations */
 @keyframes neonFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    text-shadow: 
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
       0 0 5px #fff,
       0 0 10px #fff,
       0 0 20px var(--neon-pink),
       0 0 40px var(--neon-pink),
       0 0 80px var(--neon-pink);
   }
-  20%, 24%, 55% {
+
+  20%,
+  24%,
+  55% {
     text-shadow: none;
   }
 }

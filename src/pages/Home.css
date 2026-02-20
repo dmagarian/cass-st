@@ -69,7 +69,8 @@
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    /* Smaller for mobile */
     margin-bottom: 10px;
     line-height: 1.1;
     display: flex;
@@ -78,9 +79,10 @@
 }
 
 .hero-subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    /* Smaller for mobile */
     font-family: var(--font-accent);
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     margin-top: 5px;
 }
 
